@@ -1,93 +1,97 @@
-# Reddit Keyword Alert Tool
+# 🔔 Reddit Alert - AI-Powered Reddit Research Tool
 
-Monitor Reddit for specific keywords and get email notifications when they're mentioned.
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Visit%20Site-blue)](https://reddit-alert.vercel.app)
+[![GitHub](https://img.shields.io/badge/GitHub-View%20Code-black)](https://github.com/ramagusti/reddit-keyword-alert)
 
-## Features
+> **Never miss a conversation that matters.** Monitor Reddit for keywords and get instant email notifications when your brand, product, or interests are mentioned.
 
-- 🔍 Monitor specific keywords across Reddit
-- 📧 Email notifications when keywords are found
-- 🎯 Target specific subreddits or monitor all of Reddit
-- 📊 View match history
-- ⚡ Real-time scanning
+![Reddit Alert Preview](https://reddit-alert.vercel.app/logo.png)
 
-## How to Use
+## ✨ What It Does
 
-1. Enter keywords you want to monitor (comma-separated)
-2. Optionally specify subreddits to monitor
-3. Enter your email for notifications
-4. Click "Create Alert"
+**Reddit Alert** helps founders, marketers, and researchers track relevant conversations across Reddit in real-time. Whether you're validating a product idea, monitoring your brand, or researching competitors - you'll know the moment someone mentions what you care about.
 
-## API Endpoints
+### Key Features
 
-### Create Alert
-```
+- 🔍 **Keyword Monitoring** - Track unlimited keywords across all of Reddit
+- 📧 **Email Alerts** - Get notified instantly when keywords are found
+- 🎯 **Subreddit Targeting** - Focus on specific communities or monitor everything
+- 📊 **Alert Management** - View and manage all your active alerts
+- ⚡ **Real-time Scanning** - Fast, efficient Reddit API integration
+- 🎨 **Beautiful UI** - Clean, modern interface with Reddit-inspired design
+
+## 🚀 Live Demo
+
+**👉 https://reddit-alert.vercel.app**
+
+## 🛠️ Tech Stack
+
+| Technology | Purpose |
+|------------|---------|
+| **Next.js 14** | React framework with API routes |
+| **Tailwind CSS** | Modern, responsive styling |
+| **Reddit API** | Real-time post and comment data |
+| **Vercel** | Serverless deployment & hosting |
+
+## 💡 Use Cases
+
+- **Product Validation** - See what people are saying about your problem space
+- **Brand Monitoring** - Track mentions of your company or products
+- **Competitor Research** - Monitor conversations about competitors
+- **Trend Spotting** - Catch emerging trends in your industry
+- **Community Building** - Find relevant discussions to engage with
+
+## 📡 API Endpoints
+
+```bash
+# Create a new alert
 POST /api/create-alert
-Body: {
+{
   "keywords": ["startup", "saas"],
   "subreddits": ["startups", "marketing"],
-  "email": "your@email.com"
+  "email": "you@example.com"
 }
-```
 
-### Get Alerts
-```
+# List all alerts
 GET /api/alerts
-```
 
-### Scan Reddit (for cron job)
-```
+# Trigger manual scan
 POST /api/scan-reddit
 ```
 
-## Legal Marketing Guidelines for Reddit
+## 🎯 Why I Built This
 
-### ✅ DO:
-- **Be Transparent**: Clearly state you're the creator when posting about your tool
-- **Provide Value**: Share genuinely useful content, not just promotional posts
-- **Engage Authentically**: Participate in discussions before promoting
-- **Follow Subreddit Rules**: Each subreddit has specific self-promotion rules
-- **Use Appropriate Subreddits**:
-  - r/SideProject - For sharing side projects
-  - r/Startups - For startup-related tools
-  - r/marketing - For marketing tools
-  - r/webdev - For web development tools
-  - r/entrepreneur - For business tools
+While researching SaaS opportunities on Reddit, I noticed founders spending **hours manually searching** for validation data. Reddit Alert automates that research, turning days of manual work into instant notifications.
 
-### ❌ DON'T:
-- **Spam**: Don't post the same content repeatedly
-- **Hide Affiliation**: Always disclose you're the creator
-- **Post Without Context**: Don't just drop links
-- **Ignore Moderators**: If asked to stop, stop immediately
-- **Use Bots**: Don't use automated posting tools
-- **Buy Upvotes**: This violates Reddit's Terms of Service
+This tool was built as part of my **"SaaS from Reddit Pain Points"** project - identifying real problems people discuss, then shipping solutions fast.
 
-### Best Practices:
-1. **Build Karma First**: Participate in communities before promoting
-2. **Tell Your Story**: Share your journey building the tool
-3. **Ask for Feedback**: Frame posts as seeking feedback, not promotion
-4. **Respond to Comments**: Engage with everyone who comments
-5. **Follow the 90/10 Rule**: 90% valuable content, 10% promotion
+## 📈 Impact
 
-### Subreddit-Specific Guidelines:
-- **r/SideProject**: Encourages sharing, but include details about tech stack and challenges
-- **r/Startups**: Focus on business value and problem-solving
-- **r/marketing**: Emphasize how it helps with marketing research
-- **r/webdev**: Share technical implementation details
+- Validated through Reddit research showing demand for automated research tools
+- Built and deployed in a single day
+- Solves a real pain point for founders and marketers
 
-## Technical Stack
+## 🔮 Future Roadmap
 
-- Next.js 14
-- React
-- Tailwind CSS
-- Reddit API (public endpoints)
+- [ ] AI-powered pain point extraction from posts
+- [ ] Weekly digest reports with insights
+- [ ] Slack/Discord webhook integrations
+- [ ] Sentiment analysis on mentions
+- [ ] Chrome extension for on-page alerts
 
-## Deployment
+## 🏆 What I Learned
 
-Deploy to Vercel:
-```bash
-npx vercel --prod
-```
+- **Rapid Prototyping** - Ship fast, validate with real users
+- **API Integration** - Working with Reddit's public API efficiently
+- **Serverless Architecture** - Vercel deployment for zero-cost scaling
+- **Product-Market Fit** - Building from validated pain points, not assumptions
 
-## License
+## 📄 License
 
-MIT
+MIT License - Feel free to use and modify.
+
+---
+
+**Built by Rama Gusti** | [Portfolio](https://github.com/ramagusti) | [Twitter](#)
+
+*Part of the "Vibe-Coding SaaS Tools" collection - real problems, shipped fast.*
